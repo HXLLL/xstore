@@ -343,10 +343,10 @@ TORCH_LIBRARY:FILEPATH=/home/huangxl/libtorch/lib/libtorch.so
 Torch_DIR:PATH=/home/huangxl/libtorch/share/cmake/Torch
 
 //Path to a library.
-boost_coroutine_lib:FILEPATH=boost_coroutine_lib-NOTFOUND
+boost_coroutine_lib:FILEPATH=/home/huangxl/a/xstore/deps/boost/lib/libboost_coroutine.so
 
 //Path to a library.
-boost_system_lib:FILEPATH=boost_system_lib-NOTFOUND
+boost_system_lib:FILEPATH=/home/huangxl/a/xstore/deps/boost/lib/libboost_system.so
 
 //Path to a library.
 c10_LIBRARY:FILEPATH=/home/huangxl/libtorch/lib/libc10.so
@@ -416,7 +416,7 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Path to a library.
-jemalloc_lib:FILEPATH=jemalloc_lib-NOTFOUND
+jemalloc_lib:FILEPATH=/home/huangxl/a/xstore/deps/jemalloc/lib/libjemalloc.so
 
 //Path to a library.
 kineto_LIBRARY:FILEPATH=/home/huangxl/libtorch/lib/libkineto.a
