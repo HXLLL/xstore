@@ -12,3 +12,4 @@ CMakeFiles/*
 boost-prefix/*
 jemalloc-prefix/tmp/*
 deps/*
+*.a
