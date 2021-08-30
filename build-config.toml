@@ -1,6 +1,6 @@
 [externals]
 ## The external libs are libs which donot built/cloned by the tool
-mkl = { path = "/opt/intel/mkl", exports = ["mkl_rt"],lib = "lib/intel64",include="include"}
+mkl = { path = "/opt/intel/oneapi/mkl/2021.3.0", exports = ["mkl_rt"],lib = "lib/intel64",include="include"}
 
 #[tests]
 #src   = ["deps/r2/src/logging.cc","tests/*.cc","src/stores/*.cc"]

@@ -1,0 +1,12 @@
+*
+
+!*.*
+!*/
+
+
+CMakeLists.txt
+*.cmake
+*.make
+CMakeFiles/*
+boost-prefix/*
+jemalloc-prefix/tmp/*
