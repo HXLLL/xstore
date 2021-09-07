@@ -1,1 +1,1 @@
-sudo env LD_LIBRARY_PATH=/opt/intel/oneapi/mkl/2021.3.0/lib/intel64:/home/huangxl/xstore/deps/boost/lib/ ./ycsb_client --client_name=1 --len=8 --vlen=false --threads=1 --nkeys=10000000 --load_from_file=true --data_file=data/osm_uni_10m.txt --coros=10 --vlen=false
+sudo env LD_LIBRARY_PATH=/opt/intel/oneapi/mkl/2021.3.0/lib/intel64:/home/huangxl/xstore/deps/boost/lib/ ./ycsb_client --nkeys=10000000 --threads=1 --vlen=false --load_from_file=true --data_file=data/osm_uni_10m.txt --len=8 --addr=192.168.2.1:8888 --coros=10 --client_name=1
