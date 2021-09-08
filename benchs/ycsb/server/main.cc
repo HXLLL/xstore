@@ -124,7 +124,7 @@ main(int argc, char** argv)
 
   // wait for some seconds if there is worker
   if (FLAGS_threads > 0) {
-    for (uint i = 0; i < 50; ++i) {
+    for (uint i = 0; i < 500; ++i) {
       // while (1) {
       // server does nothing because it is RDMA
       // client will read the reg_mem using RDMA
