@@ -1,6 +1,7 @@
 #pragma once
 
 #include <exception>
+#include <functional>
 
 #include "simple_rpc.hpp"
 

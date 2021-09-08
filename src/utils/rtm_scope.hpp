@@ -1,5 +1,7 @@
 #pragma once
 
+#include <immintrin.h>
+
 #include "../common.hpp"
 #include "spin_lock.hpp"
 
