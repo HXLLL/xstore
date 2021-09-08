@@ -1,1 +1,3 @@
-sudo env LD_LIBRARY_PATH=/opt/intel/oneapi/mkl/2021.3.0/lib/intel64 ./ycsb_server --nkeys=10000000 --threads=1 --vlen=false --load_from_file=true --data_file=data/osm_uni_10m.txt --alloc_mem_m=22480 --len=8 --nmodels=50000 --ncheck_model=0
+. scripts/ycsb_param.sh
+
+sudo env LD_LIBRARY_PATH=/opt/intel/oneapi/mkl/2021.3.0/lib/intel64 ./ycsb_server $SERVER_PARAM
