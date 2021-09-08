@@ -35,3 +35,6 @@
 [submodule "deps/r2"]
 	path = deps/r2
 	url = https://github.com/wxdwfc/r2.git
+[submodule "deps/lru"]
+	path = deps/lru
+	url = https://github.com/goldsborough/lru-cache.git
