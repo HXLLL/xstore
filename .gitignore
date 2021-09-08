@@ -13,6 +13,7 @@ boost-prefix/*
 jemalloc-prefix/tmp/*
 deps/*
 *.a
+cpu.txt
 
 data/*
 ne.py
