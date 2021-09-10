@@ -5,19 +5,14 @@ port   = 8888
 id   = 1
 host = "192.168.1.1"
 
-[[client]]
-id   = 6
-host = "192.168.2.1" # we use val06 as the server
-
-
 [master]
-host = "192.168.1.2"
+host = "192.168.2.2"
 
 
 ## server config
 
 [[server]]
-host    = "val00"
+host    = "192.168.2.1"
 
 [server_config]
 db_type = "ycsbh"
