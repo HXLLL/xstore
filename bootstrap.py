@@ -106,18 +106,20 @@ class ConnectProxy:
         self.passp = passp
 
     def connect(self,pwd,passp=None,timeout = 30):
-        user_config = config.lookup(self.mac)
-        if user_config:
-            print("connect", config)
-            #print(user_config)
-            #cfg = {'hostname': self.mac, 'username': self.user}
-            #cfg['sock'] = paramiko.ProxyCommand(user_config['proxycommand'])
-            return self.ssh.connect(hostname = self.mac,username = self.user, password = pwd,
-                                    timeout = timeout, allow_agent=False,look_for_keys=False,passphrase=passp,sock=paramiko.ProxyCommand(user_config['proxycommand']),banner_timeout=400)
+        # user_config = config.lookup(self.mac)
+        # if user_config:
+        #     print("connect", config)
+        #     #print(user_config)
+        #     #cfg = {'hostname': self.mac, 'username': self.user}
+        #     #cfg['sock'] = paramiko.ProxyCommand(user_config['proxycommand'])
+        #     return self.ssh.connect(hostname = self.mac,username = self.user, password = pwd,
+        #                             timeout = timeout, allow_agent=False,look_for_keys=False,passphrase=passp,sock=paramiko.ProxyCommand(user_config['proxycommand']),banner_timeout=400)
 
-        else:
-            return self.ssh.connect(hostname = self.mac,username = self.user, password = pwd,
-                                    timeout = timeout, allow_agent=False,look_for_keys=False,passphrase=passp)
+        # else:
+        #    return self.ssh.connect(hostname = self.mac,username = self.user, password = pwd,
+        #                            timeout = timeout, allow_agent=False,look_for_keys=False,passphrase=passp)
+        return self.ssh.connect(hostname = self.mac,username = self.user, password = pwd,
+                                timeout = timeout, allow_agent=False,look_for_keys=False,passphrase=passp)
 
     def connect_with_pkey(self,keyfile_name,timeout = 10):
         print("connect with pkey")
