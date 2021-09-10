@@ -25,6 +25,7 @@ public:
 
   static u32 choose_nic(u32 tid)
   {
+    return 0;
     if (tid >= core_per_socket) {
       /*
        * using the first NIC for the thread with id 12-23,
