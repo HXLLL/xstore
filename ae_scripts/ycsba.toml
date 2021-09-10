@@ -7,18 +7,18 @@ pwd="huangxlLab"
 [[pass]]
 host = "192.168.2.1"
 path = "/home/huangxl/xstore"
-cmd = "sleep 1; ./fserver -db_type ycsb --threads 20 --id 0 -ycsb_num=100000000 --no_train=false --step=2 --model_config=ae_scripts/ycsb-model.toml"
+cmd = "sleep 1; . ./env.sh; echo huangxlLab | sudo -S env LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./fserver -db_type ycsb --threads 20 --id 0 -ycsb_num=100000000 --no_train=false --step=2 --model_config=ae_scripts/ycsb-model.toml"
 
 ## master process to collect results
 [[pass]]
 host = "192.168.2.1"
 path = "/home/huangxl/xstore"
-cmd = "sleep 5; ./master -client_config cs.toml -epoch 400 -nclients 8"
+cmd = "sleep 5; . ./env.sh; echo huangxlLab | sudo -S env LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./master -client_config cs.toml -epoch 400 -nclients 1"
 
 [[pass]]
 host="192.168.1.1"
 path="/home/huangxl/xstore"
-cmd = "./ycsb --threads 20 -concurrency 1 -workloads ycsbb -server_host 192.168.2.1 --id 8 -total_accts=20000000 -need_hash -eval_type=sc"
+cmd = ". ./env.sh; echo huangxlLab | sudo -S env LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./ycsb --threads 20 -concurrency 1 -workloads ycsbb -server_host 192.168.2.1 --id 8 -total_accts=20000000 -need_hash -eval_type=sc"
 
 
 
