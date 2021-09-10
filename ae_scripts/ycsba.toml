@@ -1,5 +1,7 @@
 ## global configs will overwrite the per-process configurations
 global_configs = "--need_hash=false --cache_sz_m=327680 --server_host=192.168.2.1 --total_accts=100000000 --eval_type=sc --workloads=ycsba --concurrency=8 --undefok=concurrency,workloads,eval_type,total_accts,server_host,cache_sz_m,need_hash"
+user="huangxl"
+pwd="huangxlLab"
 
 ## server process
 [[pass]]
