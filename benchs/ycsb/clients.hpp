@@ -165,8 +165,8 @@ public:
             sleep(1);
           }
 
-          // LOG(4) << "[YCSB] client #" << thread_id << " bootstrap connect
-          // done to server";
+          LOG(4) << "[YCSB] client #" << thread_id << " bootstrap connect
+          done to server";
 
           RScheduler r;
           RPC rpc(adapter);

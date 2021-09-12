@@ -14,7 +14,7 @@ class CoreBinder {
 #ifndef __APPLE__
     cpu_set_t cpuset;
     CPU_ZERO(&cpuset);
-    CPU_SET(id, &cpuset);
+    CPU_SET(id*2, &cpuset);
     int rc = pthread_setaffinity_np(pthread_self(),
                                     sizeof(cpu_set_t), &cpuset);
     ASSERT(rc == 0) <<  " " << rc << " " << strerror(errno);

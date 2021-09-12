@@ -14,6 +14,7 @@ jemalloc-prefix/tmp/*
 deps/*
 *.a
 cpu.txt
+build/*
 
 data/*
 ne.py
