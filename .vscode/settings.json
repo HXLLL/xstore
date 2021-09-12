@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "memory": "cpp"
+    },
+    "files.watcherExclude": {
+        "**/boost-prefix/**": true,
+        "**/build/**": true,
+        "**/deps/**": true,
+        "**/jemalloc-prefix/**": true
+    },
+    "cmake.configureOnOpen": true
+}
