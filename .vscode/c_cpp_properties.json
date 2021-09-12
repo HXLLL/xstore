@@ -5,13 +5,15 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include/c++/7",
-                "/usr/include/x86_64-linux-gnu/c++/7"
+                "/usr/include/x86_64-linux-gnu/c++/7",
+                "/opt/intel/oneapi/mkl/2021.3.0/include"
             ],
             "defines": [],
-            "compilerPath": "/opt/intel/oneapi/compiler/2021.3.0/linux/bin/clang",
+            "compilerPath": "/usr/bin/c++",
             "cStandard": "c17",
             "cppStandard": "c++14",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "compilerArgs": []
         }
     ],
     "version": 4
