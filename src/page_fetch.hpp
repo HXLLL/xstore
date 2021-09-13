@@ -27,9 +27,10 @@ class PageFetcher {
   }
 
   inline static Option<int> lookup(PAGE_TYPE *page,const K &key) {
-    for(int i = 0;i < page->num_keys;++i)
-      if(page->keys[i] == key)
-        return Option<int>(i);
+    // for(int i = 0;i < page->num_keys;++i)
+    //   if(page->keys[i] == key)
+    //     return Option<int>(i);
+    return Option<int>(0);
     return {};
   }
 
