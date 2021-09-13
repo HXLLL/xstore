@@ -126,6 +126,7 @@ public:
           ASSERT(!all_devices.empty()) << "RDMA must be supported.";
 
           auto nic_id = VALNic::choose_nic(thread_id);
+          fprintf(stderr, "%d\n", nic_id);
           ASSERT(nic_id < all_devices.size()) << "wrong dev id:" << nic_id;
 
           RNic nic(all_devices[VALNic::choose_nic(thread_id)]);

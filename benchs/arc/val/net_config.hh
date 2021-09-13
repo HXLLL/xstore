@@ -2,6 +2,8 @@
 
 #include "common.hpp" // fstore's common
 
+DEFINE_uint64(nic_base, 0, "Base NIC ID.");
+
 namespace fstore {
 
 namespace platforms {
@@ -25,6 +27,7 @@ public:
 
   static u32 choose_nic(u32 tid)
   {
+    return FLAGS_nic_base;
     return 0;
     if (tid >= core_per_socket) {
       /*

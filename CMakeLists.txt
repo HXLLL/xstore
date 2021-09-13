@@ -4,6 +4,7 @@ ADD_DEFINITIONS(-std=c++14)
 include(deps/deps.cmake)
 include_directories("src")
 include_directories("deps")
+# set(CMAKE_CXX_FLAGS "-O2 -g -mrtm -fgnu-tm")
 set(CMAKE_CXX_FLAGS "-O2 -g -mrtm -fgnu-tm")
 file(GLOB fserver_SORUCES ""  "server/main.cc"  "deps/r2/src/*.cc"  "deps/r2/src/rpc/*.cc"  "server/loaders/*.cc"  "deps/r2/src/msg/*.cc" )
 add_executable(fserver ${fserver_SORUCES} )
@@ -113,6 +114,9 @@ include(tests/tests.cmake)
 
 add_custom_target(mytest)
 add_dependencies(mytest fserver master ycsb)
+
+add_custom_target(mt)
+add_dependencies(mt mytest)
 
 ## tests
 enable_testing()

@@ -2,8 +2,11 @@
 
 #include "./lib.hpp"
 #include "r2/src/rpc/rpc.hpp"
+#include "../arc/val/net_config.hh"
 
 namespace fstore {
+
+using namespace platforms;
 
 namespace bench {
 
@@ -30,7 +33,7 @@ public:
     auto all_devices = RNicInfo::query_dev_names();
     ASSERT(!all_devices.empty()) << "RDMA must be supported.";
 
-    RNic nic(all_devices[0]);
+    RNic nic(all_devices[VALNic::choose_nic(0)]);
     auto ret = global_rdma_ctrl().mr_factory.register_mr(
       unique_id,
       global_memory_region().base_mem_,
